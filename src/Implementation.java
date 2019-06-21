@@ -2,10 +2,12 @@
 public class Implementation implements RemoteInterface {
 
     // Implementing the interface method
-    public void listAllFromCourse() {}
-    public void listAbilitiesFromCity() {}
+    public void getAllFromCourse() {
+        System.out.println("Called getAllFromCourse method");
+    }
+    public void getAbilitiesFromCity() {}
     public void addProfileExperience() {}
     public void getExperienceFromEmail() {}
-    public void listAll() {}
+    public void getAll() {}
     public void getInfoFromEmail() {}
 }
