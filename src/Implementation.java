@@ -2,8 +2,9 @@
 public class Implementation implements RemoteInterface {
 
     // Implementing the interface method
-    public void getAllFromCourse() {
-        System.out.println("Called getAllFromCourse method");
+    public String getAllFromCourse(String course) {
+        JDBCUtil db = new JDBCUtil();
+        return db.getAllFromCourseQuery(course);
     }
     public String getAbilitiesFromCity(String city) {
         JDBCUtil db = new JDBCUtil();
