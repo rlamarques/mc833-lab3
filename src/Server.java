@@ -17,10 +17,9 @@ public class Server extends Implementation {
             // Binding the remote object (stub) in the registry
             Registry registry = LocateRegistry.getRegistry();
 
-            registry.bind("Hello", stub);
+            registry.bind("Profiles", stub);
             System.err.println("Server ready");
 
-//            JDBCUtil.connect();
 
         } catch (Exception e) {
             System.err.println("Server exception: " + e.toString());
