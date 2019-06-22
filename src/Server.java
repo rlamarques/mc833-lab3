@@ -19,6 +19,9 @@ public class Server extends Implementation {
 
             registry.bind("Hello", stub);
             System.err.println("Server ready");
+
+//            JDBCUtil.connect();
+
         } catch (Exception e) {
             System.err.println("Server exception: " + e.toString());
             e.printStackTrace();

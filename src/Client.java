@@ -12,7 +12,7 @@ public class Client {
             RemoteInterface stub = (RemoteInterface) registry.lookup("Hello");
 
             // Calling the remote method using the obtained object
-            stub.getAllFromCourse();
+            System.out.println(stub.getAbilitiesFromCity("goiania"));
 
             // System.out.println("Remote method invoked");
         } catch (Exception e) {

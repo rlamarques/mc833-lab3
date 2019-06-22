@@ -5,9 +5,24 @@ public class Implementation implements RemoteInterface {
     public void getAllFromCourse() {
         System.out.println("Called getAllFromCourse method");
     }
-    public void getAbilitiesFromCity() {}
-    public void addProfileExperience() {}
-    public void getExperienceFromEmail() {}
-    public void getAll() {}
-    public void getInfoFromEmail() {}
+    public String getAbilitiesFromCity(String city) {
+        JDBCUtil db = new JDBCUtil();
+        return db.getAbilitiesFromCityQuery(city);
+    }
+    public void addProfileExperience(String email, String experience) {
+        JDBCUtil db = new JDBCUtil();
+        db.addProfileExperienceQuery(email, experience);
+    }
+    public String getExperienceFromEmail(String email) {
+        JDBCUtil db = new JDBCUtil();
+        return db.getExperienceFromEmailQuery(email);
+    }
+    public String getAll() {
+        JDBCUtil db = new JDBCUtil();
+        return db.getAllQuery();
+    }
+    public String getInfoFromEmail(String email) {
+        JDBCUtil db = new JDBCUtil();
+        return db.getInfoFromEmailQuery(email);
+    }
 }
