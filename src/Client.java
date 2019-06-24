@@ -6,7 +6,7 @@ public class Client {
     public static void main(String[] args) {
         try {
             // Getting the registry
-            Registry registry = LocateRegistry.getRegistry(null);
+            Registry registry = LocateRegistry.getRegistry(null, 5000);
 
             // Looking up the registry for the remote object
             RemoteInterface stub = (RemoteInterface) registry.lookup("Profiles");
