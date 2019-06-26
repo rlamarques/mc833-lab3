@@ -2,6 +2,7 @@ import java.net.InetAddress;
 import java.rmi.registry.Registry;
 import java.rmi.registry.LocateRegistry;
 import java.rmi.RemoteException;
+import java.rmi.Remote;
 import java.rmi.server.UnicastRemoteObject;
 import java.net.DatagramSocket;
 
@@ -18,13 +19,6 @@ public class Server extends Implementation {
 
             // Binding the remote object (stub) in the registry
             Registry registry = LocateRegistry.createRegistry(5000);
-
-            // To get the server IP Address
-//            String ip;
-//            try(final DatagramSocket socket = new DatagramSocket()){
-//                socket.connect(InetAddress.getByName("8.8.8.8"), 10002);
-//                ip = socket.getLocalAddress().getHostAddress();
-//            }
 
             registry.bind("Profiles", stub);
             System.err.println("Server ready");

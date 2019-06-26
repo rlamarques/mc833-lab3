@@ -1,0 +1,33 @@
+// Implementing the remote interface
+public class Implementation implements RemoteInterface {
+
+    // Implementing the interface method
+    public String getAllFromCourse(String course) {
+    	double t1 = System.currentTimeMillis();
+        JDBCUtil db = new JDBCUtil();
+        String res = db.getAllFromCourseQuery(course);
+    	double t2 = System.currentTimeMillis();
+        System.out.println("KKK" + t1 + " " + t2);
+        return res;
+    }
+    public String getAbilitiesFromCity(String city) {
+        JDBCUtil db = new JDBCUtil();
+        return db.getAbilitiesFromCityQuery(city);
+    }
+    public void addProfileExperience(String email, String experience) {
+        JDBCUtil db = new JDBCUtil();
+        db.addProfileExperienceQuery(email, experience);
+    }
+    public String getExperienceFromEmail(String email) {
+        JDBCUtil db = new JDBCUtil();
+        return db.getExperienceFromEmailQuery(email);
+    }
+    public String getAll() {
+        JDBCUtil db = new JDBCUtil();
+        return db.getAllQuery();
+    }
+    public String getInfoFromEmail(String email) {
+        JDBCUtil db = new JDBCUtil();
+        return db.getInfoFromEmailQuery(email);
+    }
+}

@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class JDBCUtil {
     // CHANGE THIS TO YOUR DATABASE PATH
-    private String db_name = "/home/user/class/mc833/mc833-lab1/curriculum.db";
+    private String db_name = "./curriculum.db";
 
     /**
      * Connect to a sample database
@@ -26,6 +26,8 @@ public class JDBCUtil {
     }
 
     private String getString(String email, String sql, String column) {
+    	
+    	
         try (Connection conn = this.connect();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setString(1, email);
