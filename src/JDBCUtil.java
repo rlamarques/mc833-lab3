@@ -2,17 +2,10 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- *
- * @author sqlitetutorial.net
- */
 public class JDBCUtil {
     // CHANGE THIS TO YOUR DATABASE PATH
     private String db_name = "/home/user/class/mc833/mc833-lab1/curriculum.db";
 
-    /**
-     * Connect to a sample database
-     */
     private Connection connect() {
         // SQLite connection string
         String url = "jdbc:sqlite:" + db_name;
